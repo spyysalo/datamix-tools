@@ -1,0 +1,28 @@
+{
+    "comment": "Simple 80% English, 20% multilingual example mix",
+    "english": {
+        "proportion": 0.8,
+        "data": "nemotron-cc-1.0-high-actual"
+    },
+    "multilingual" : {
+	"proportion": 0.2,
+        "mixture": {
+            "german": {
+                "proportion": 0.25,
+                "data": "hplt-2.0-cleaned-deu_Latn"
+            },
+            "french": {
+                "proportion": 0.25,
+                "data": "hplt-2.0-cleaned-fra_Latn"
+            },
+            "italian": {
+                "proportion": 0.25,
+                "data": "hplt-2.0-cleaned-ita_Latn"
+            },
+            "spanish": {
+                "proportion": 0.25,
+                "data": "hplt-2.0-cleaned-spa_Latn"
+            }
+        }
+    }
+}
