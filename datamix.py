@@ -106,7 +106,8 @@ def validate_mixture(mixture, paths, label=None, names=None, ids=None):
         else:
             raise ValueError(f'neither "{DATA}" not "{MIXTURE}" for "{k}"')
 
-    if sum(proportions) != 1:
+    if round(sum(proportions), 10) != 1: # fixed to avoid floating point issues
+        print(sum(proportions))
         raise ValueError(f'"{PROPORTION}" values do not add to 1 for {label}')
 
 
