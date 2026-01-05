@@ -78,20 +78,20 @@
             "Albanian": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-als_Latn": {
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-als_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-als_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-als_Latn"
                     },
-                    "finepdfs-edu": {
+                   "finepdfs-edu-als_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-als_Latn"
                     },
-                    "multisynth": {
-                        "proportion": 0.34,
+                    "Helsinki-NLP-nemotron-cc-translated-sqi_Latn": {
+                        "proportion": 0.5,
                         "data": "Helsinki-NLP-nemotron-cc-translated-sqi_Latn"
                     }
                 }
@@ -99,19 +99,19 @@
             "Bosnian": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
+                    "hplt-3.0-sorted-bos_Latn": {
                         "proportion": 0.5,
                         "data": "hplt-3.0-sorted-bos_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-bos_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-bos_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-bos_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-bos_Latn"
                     },
-                    "multisynth": {
+                    "Helsinki-NLP-nemotron-cc-translated-bos_Latn": {
                         "proportion": 0.34,
                         "data": "Helsinki-NLP-nemotron-cc-translated-bos_Latn"
                     }
@@ -120,41 +120,37 @@
             "Bulgarian": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-bul_Cyrl": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-bul_Cyrl"
                     },
-                    "finepdfs": {
+                    "finepdfs-bul_Cyrl": {
                         "proportion": 0.15,
                         "data": "finepdfs-bul_Cyrl"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-bul_Cyrl": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-bul_Cyrl"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "Helsinki-NLP-nemotron-cc-translated-bul_Cyrl"
                     }
                 }
             },
             "Catalan": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-cat_Latn": {
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-cat_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-cat_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-cat_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-cat_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-cat_Latn"
                     },
-                    "multisynth": {
-                        "proportion": 0.34,
+                    "Helsinki-NLP-nemotron-cc-translated-cat_Latn": {
+                        "proportion": 0.5,
                         "data": "Helsinki-NLP-nemotron-cc-translated-cat_Latn"
                     }
                 }
@@ -162,121 +158,109 @@
             "Czech": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-ces_Latn": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-ces_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-ces_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-ces_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-ces_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-ces_Latn"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "Helsinki-NLP-nemotron-cc-translated-ces_Latn"
                     }
                 }
             },
             "Danish": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-dan_Latn": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-dan_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-dan_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-dan_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-dan_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-dan_Latn"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "MultiSynt-MT-dan_Latn"
                     }
                 }
             },
             "German": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-deu_Latn": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-deu_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-deu_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-deu_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-deu_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-deu_Latn"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "MultiSynt-MT-deu_Latn"
                     }
                 }
             },
             "Estonian": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-ekk_Latn": {
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-ekk_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-ekk_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-ekk_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-ekk_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-ekk_Latn"
+                    },
+                    "Helsinki-NLP-nemotron-cc-translated-est_Latn": {
+                        "proportion": 0.50,
+                        "data": "Helsinki-NLP-nemotron-cc-translated-est_Latn"
                     }
                 }
             },
             "Greek": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-ell_Grek": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-ell_Grek"
                     },
-                    "finepdfs": {
+                    "finepdfs-ell_Grek": {
                         "proportion": 0.15,
                         "data": "finepdfs-ell_Grek"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-ell_Grek": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-ell_Grek"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "Helsinki-NLP-nemotron-cc-translated-ell_Grek"
                     }
                 }
             },
             "Basque": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-eus_Latn": {
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-eus_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-eus_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-eus_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-eus_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-eus_Latn"
                     },
-                    "multisynth": {
-                        "proportion": 0.34,
+                    "Helsinki-NLP-nemotron-cc-translated-eus_Latn": {
+                        "proportion": 0.50,
                         "data": "Helsinki-NLP-nemotron-cc-translated-eus_Latn"
                     }
                 }
@@ -284,62 +268,54 @@
             "Finnish": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-fin_Latn": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-fin_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-fin_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-fin_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-fin_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-fin_Latn"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "MultiSynt-MT-fin_Latn"
                     }
                 }
             },
             "French": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-fra_Latn": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-fra_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-fra_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-fra_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-fra_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-fra_Latn"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "MultiSynt-MT-fra_Latn"
                     }
                 }
             },
             "Galician": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-glg_Latn": {
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-glg_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-glg_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-glg_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-glg_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-glg_Latn"
                     },
-                    "multisynth": {
-                        "proportion": 0.34,
+                    "Helsinki-NLP-nemotron-cc-translated-glg_Latn": {
+                        "proportion": 0.50,
                         "data": "Helsinki-NLP-nemotron-cc-translated-glg_Latn"
                     }
                 }
@@ -347,20 +323,16 @@
             "Irish": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-gle_Latn": {
+                        "proportion": 0.35,
                         "data": "hplt-3.0-sorted-gle_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-gle_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-gle_Latn"
                     },
-                    "finepdfs-edu": {
-                        "proportion": 0.01,
-                        "data": "finepdfs-edu-gle_Latn"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
+                    "Helsinki-NLP-nemotron-cc-translated-gle_Latn": {
+                        "proportion": 0.50,
                         "data": "Helsinki-NLP-nemotron-cc-translated-gle_Latn"
                     }
                 }
@@ -368,40 +340,36 @@
             "Hungarian": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-hun_Latn": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-hun_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-hun_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-hun_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-hun_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-hun_Latn"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "MultiSynt-MT-hun_Latn"
                     }
                 }
             },
             "Croatian": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
+                    "hplt-3.0-sorted-hrv_Latn": {
                         "proportion": 0.5,
                         "data": "hplt-3.0-sorted-hrv_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-hrv_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-hrv_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-hrv_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-hrv_Latn"
                     },
-                    "multisynth": {
+                    "Helsinki-NLP-nemotron-cc-translated-hrv_Latn": {
                         "proportion": 0.34,
                         "data": "Helsinki-NLP-nemotron-cc-translated-hrv_Latn"
                     }
@@ -410,20 +378,20 @@
             "Icelandic": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-isl_Latn": {
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-isl_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-isl_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-isl_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-isl_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-isl_Latn"
                     },
-                    "multisynth": {
-                        "proportion": 0.34,
+                    "MultiSynt-MT-isl_Latn": {
+                        "proportion": 0.50,
                         "data": "MultiSynt-MT-isl_Latn"
                     }
                 }
@@ -431,41 +399,37 @@
             "Italian": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-ita_Latn": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-ita_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-ita_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-ita_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-ita_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-ita_Latn"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "MultiSynt-MT-ita_Latn"
                     }
                 }
             },
             "Georgian": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-kat_Geor": {
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-kat_Geor"
                     },
-                    "finepdfs": {
+                    "finepdfs-kat_Geor": {
                         "proportion": 0.15,
                         "data": "finepdfs-kat_Geor"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-kat_Geor": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-kat_Geor"
                     },
-                    "multisynth": {
-                        "proportion": 0.34,
+                    "Helsinki-NLP-nemotron-cc-translated-kat_Geor": {
+                        "proportion": 0.50,
                         "data": "Helsinki-NLP-nemotron-cc-translated-kat_Geor"
                     }
                 }
@@ -473,19 +437,19 @@
             "Lithuanian": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
+                    "hplt-3.0-sorted-lit_Latn": {
                         "proportion": 0.5,
                         "data": "hplt-3.0-sorted-lit_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-lit_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-lit_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-lit_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-lit_Latn"
                     },
-                    "multisynth": {
+                    "Helsinki-NLP-nemotron-cc-translated-lit_Latn": {
                         "proportion": 0.34,
                         "data": "Helsinki-NLP-nemotron-cc-translated-lit_Latn"
                     }
@@ -494,20 +458,20 @@
             "Latvian": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-lvs_Latn": {
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-lvs_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-lvs_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-lvs_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-lvs_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-lvs_Latn"
                     },
-                    "multisynth": {
-                        "proportion": 0.34,
+                    "Helsinki-NLP-nemotron-cc-translated-lav_Latn": {
+                        "proportion": 0.50,
                         "data": "Helsinki-NLP-nemotron-cc-translated-lav_Latn"
                     }
                 }
@@ -515,20 +479,20 @@
             "Macedonian": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-mkd_Cyrl": {
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-mkd_Cyrl"
                     },
-                    "finepdfs": {
+                    "finepdfs-mkd_Cyrl": {
                         "proportion": 0.15,
                         "data": "finepdfs-mkd_Cyrl"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-mkd_Cyrl": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-mkd_Cyrl"
                     },
-                    "multisynth": {
-                        "proportion": 0.34,
+                    "Helsinki-NLP-nemotron-cc-translated-mkd_Cyrl": {
+                        "proportion": 0.50,
                         "data": "Helsinki-NLP-nemotron-cc-translated-mkd_Cyrl"
                     }
                 }
@@ -536,20 +500,16 @@
             "Maltese": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
-                        "data": "hplt-3.0-sorted-mlt_Latn"
-                    },
-                    "finepdfs": {
-                        "proportion": 0.15,
+                    "finepdfs-mlt_Latn": {
+                        "proportion": 0.45,
                         "data": "finepdfs-mlt_Latn"
                     },
-                    "finepdfs-edu": {
-                        "proportion": 0.01,
+                    "finepdfs-edu-mlt_Latn": {
+                        "proportion": 0.05,
                         "data": "finepdfs-edu-mlt_Latn"
                     },
-                    "multisynth": {
-                        "proportion": 0.34,
+                    "Helsinki-NLP-nemotron-cc-translated-mlt_Latn": {
+                        "proportion": 0.50,
                         "data": "Helsinki-NLP-nemotron-cc-translated-mlt_Latn"
                     }
                 }
@@ -557,41 +517,37 @@
             "Dutch": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-nld_Latn": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-nld_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-nld_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-nld_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-nld_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-nld_Latn"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "MultiSynt-MT-nld_Latn"
                     }
                 }
             },
             "Norwegian-Nynorsk": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-nno_Latn": {
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-nno_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-nno_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-nno_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-nno_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-nno_Latn"
                     },
-                    "multisynth": {
-                        "proportion": 0.34,
+                    "MultiSynt-MT-nno_Latn": {
+                        "proportion": 0.5,
                         "data": "MultiSynt-MT-nno_Latn"
                     }
                 }
@@ -599,231 +555,187 @@
             "Norwegian-Bokmål": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-nob_Latn": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-nob_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-nob_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-nob_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-nob_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-nob_Latn"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "MultiSynt-MT-nob_Latn"
                     }
                 }
             },
             "Polish": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-pol_Latn": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-pol_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-pol_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-pol_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-pol_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-pol_Latn"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "MultiSynt-MT-pol_Latn"
                     }
                 }
             },
             "Portuguese": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-por_Latn": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-por_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-por_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-por_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-por_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-por_Latn"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "MultiSynt-MT-por_Latn"
                     }
                 }
             },
             "Romanian": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-ron_Latn": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-ron_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-ron_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-ron_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-ron_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-ron_Latn"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "MultiSynt-MT-ron_Latn"
                     }
                 }
             },
             "Slovak": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-slk_Latn": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-slk_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-slk_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-slk_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-slk_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-slk_Latn"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "Helsinki-NLP-nemotron-cc-translated-slk_Latn"
                     }
                 }
             },
             "Slovenian": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-slv_Latn": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-slv_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-slv_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-slv_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-slv_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-slv_Latn"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "Helsinki-NLP-nemotron-cc-translated-slv_Latn"
                     }
                 }
             },
             "Spanish": {
-                "proportion": 0.02777,
+                "proportion": 0.02805,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-spa_Latn": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-spa_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-spa_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-spa_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-spa_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-spa_Latn"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "MultiSynt-MT-spa_Latn"
                     }
                 }
             },
             "Serbian": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-srp_Cyrl": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-srp_Cyrl"
                     },
-                    "finepdfs": {
+                    "finepdfs-srp_Cyrl": {
                         "proportion": 0.15,
                         "data": "finepdfs-srp_Cyrl"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-srp_Cyrl": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-srp_Cyrl"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "Helsinki-NLP-nemotron-cc-translated-srp_Cyrl"
                     }
                 }
             },
             "Swedish": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-swe_Latn": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-swe_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-swe_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-swe_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-swe_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-swe_Latn"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "MultiSynt-MT-swe_Latn"
                     }
                 }
             },
             "Turkish": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-tur_Latn": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-tur_Latn"
                     },
-                    "finepdfs": {
+                    "finepdfs-tur_Latn": {
                         "proportion": 0.15,
                         "data": "finepdfs-tur_Latn"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-tur_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-tur_Latn"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "Helsinki-NLP-nemotron-cc-translated-tur_Latn"
                     }
                 }
             },
             "Ukrainian": {
                 "proportion": 0.02777,
                 "mixture": {
-                    "hplt3": {
-                        "proportion": 0.5,
+                    "hplt-3.0-sorted-ukr_Cyrl": {
+                        "proportion": 0.84,
                         "data": "hplt-3.0-sorted-ukr_Cyrl"
                     },
-                    "finepdfs": {
+                    "finepdfs-ukr_Cyrl": {
                         "proportion": 0.15,
                         "data": "finepdfs-ukr_Cyrl"
                     },
-                    "finepdfs-edu": {
+                    "finepdfs-edu-ukr_Cyrl": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-ukr_Cyrl"
-                    },
-                    "multisynth": {
-                        "proportion": 0.34,
-                        "data": "MultiSynt-MT-ukr_Cyrl"
                     }
                 }
             }
