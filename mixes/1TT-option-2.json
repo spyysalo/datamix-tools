@@ -1,5 +1,5 @@
 {
-    "comment": "80% English, near-uniform mix of languages other than English, include up to 50% language total translated data when the amount of native data is insufficient",
+    "comment": "80% English, near-uniform mix of languages other than English, include 50% translated data even when sufficient native data is available",
     "English": {
         "proportion": 0.8,
         "mixture": {
@@ -121,7 +121,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-bul_Cyrl": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-bul_Cyrl"
                     },
                     "finepdfs-bul_Cyrl": {
@@ -131,6 +131,10 @@
                     "finepdfs-edu-bul_Cyrl": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-bul_Cyrl"
+                    },
+                    "Helsinki-NLP-nemotron-cc-translated-bul_Cyrl": {
+                        "proportion": 0.5,
+                        "data": "Helsinki-NLP-nemotron-cc-translated-bul_Cyrl"
                     }
                 }
             },
@@ -159,7 +163,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-ces_Latn": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-ces_Latn"
                     },
                     "finepdfs-ces_Latn": {
@@ -169,6 +173,10 @@
                     "finepdfs-edu-ces_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-ces_Latn"
+                    },
+                    "Helsinki-NLP-nemotron-cc-translated-ces_Latn": {
+                        "proportion": 0.5,
+                        "data": "Helsinki-NLP-nemotron-cc-translated-ces_Latn"
                     }
                 }
             },
@@ -176,7 +184,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-dan_Latn": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-dan_Latn"
                     },
                     "finepdfs-dan_Latn": {
@@ -186,6 +194,10 @@
                     "finepdfs-edu-dan_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-dan_Latn"
+                    },
+                    "MultiSynt-MT-dan_Latn": {
+                        "proportion": 0.50,
+                        "data": "MultiSynt-MT-dan_Latn"
                     }
                 }
             },
@@ -193,7 +205,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-deu_Latn": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-deu_Latn"
                     },
                     "finepdfs-deu_Latn": {
@@ -203,6 +215,10 @@
                     "finepdfs-edu-deu_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-deu_Latn"
+                    },
+                    "MultiSynt-MT-deu_Latn": {
+                        "proportion": 0.50,
+                        "data": "MultiSynt-MT-deu_Latn"
                     }
                 }
             },
@@ -231,7 +247,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-ell_Grek": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-ell_Grek"
                     },
                     "finepdfs-ell_Grek": {
@@ -241,6 +257,10 @@
                     "finepdfs-edu-ell_Grek": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-ell_Grek"
+                    },
+                    "Helsinki-NLP-nemotron-cc-translated-ell_Grek": {
+                        "proportion": 0.50,
+                        "data": "Helsinki-NLP-nemotron-cc-translated-ell_Grek"
                     }
                 }
             },
@@ -269,7 +289,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-fin_Latn": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-fin_Latn"
                     },
                     "finepdfs-fin_Latn": {
@@ -279,6 +299,10 @@
                     "finepdfs-edu-fin_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-fin_Latn"
+                    },
+                    "MultiSynt-MT-fin_Latn": {
+                        "proportion": 0.50,
+                        "data": "MultiSynt-MT-fin_Latn"
                     }
                 }
             },
@@ -286,7 +310,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-fra_Latn": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-fra_Latn"
                     },
                     "finepdfs-fra_Latn": {
@@ -296,6 +320,10 @@
                     "finepdfs-edu-fra_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-fra_Latn"
+                    },
+                    "MultiSynt-MT-fra_Latn": {
+                        "proportion": 0.50,
+                        "data": "MultiSynt-MT-fra_Latn"
                     }
                 }
             },
@@ -341,7 +369,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-hun_Latn": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-hun_Latn"
                     },
                     "finepdfs-hun_Latn": {
@@ -351,6 +379,10 @@
                     "finepdfs-edu-hun_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-hun_Latn"
+                    },
+                    "MultiSynt-MT-hun_Latn": {
+                        "proportion": 0.50,
+                        "data": "MultiSynt-MT-hun_Latn"
                     }
                 }
             },
@@ -400,7 +432,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-ita_Latn": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-ita_Latn"
                     },
                     "finepdfs-ita_Latn": {
@@ -410,6 +442,10 @@
                     "finepdfs-edu-ita_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-ita_Latn"
+                    },
+                    "MultiSynt-MT-ita_Latn": {
+                        "proportion": 0.50,
+                        "data": "MultiSynt-MT-ita_Latn"
                     }
                 }
             },
@@ -518,7 +554,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-nld_Latn": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-nld_Latn"
                     },
                     "finepdfs-nld_Latn": {
@@ -528,6 +564,10 @@
                     "finepdfs-edu-nld_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-nld_Latn"
+                    },
+                    "MultiSynt-MT-nld_Latn": {
+                        "proportion": 0.50,
+                        "data": "MultiSynt-MT-nld_Latn"
                     }
                 }
             },
@@ -556,7 +596,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-nob_Latn": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-nob_Latn"
                     },
                     "finepdfs-nob_Latn": {
@@ -566,6 +606,10 @@
                     "finepdfs-edu-nob_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-nob_Latn"
+                    },
+                    "MultiSynt-MT-nob_Latn": {
+                        "proportion": 0.50,
+                        "data": "MultiSynt-MT-nob_Latn"
                     }
                 }
             },
@@ -573,7 +617,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-pol_Latn": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-pol_Latn"
                     },
                     "finepdfs-pol_Latn": {
@@ -583,6 +627,10 @@
                     "finepdfs-edu-pol_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-pol_Latn"
+                    },
+                    "MultiSynt-MT-pol_Latn": {
+                        "proportion": 0.50,
+                        "data": "MultiSynt-MT-pol_Latn"
                     }
                 }
             },
@@ -590,7 +638,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-por_Latn": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-por_Latn"
                     },
                     "finepdfs-por_Latn": {
@@ -600,6 +648,10 @@
                     "finepdfs-edu-por_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-por_Latn"
+                    },
+                    "MultiSynt-MT-por_Latn": {
+                        "proportion": 0.50,
+                        "data": "MultiSynt-MT-por_Latn"
                     }
                 }
             },
@@ -607,7 +659,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-ron_Latn": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-ron_Latn"
                     },
                     "finepdfs-ron_Latn": {
@@ -617,6 +669,10 @@
                     "finepdfs-edu-ron_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-ron_Latn"
+                    },
+                    "MultiSynt-MT-ron_Latn": {
+                        "proportion": 0.50,
+                        "data": "MultiSynt-MT-ron_Latn"
                     }
                 }
             },
@@ -624,7 +680,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-slk_Latn": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-slk_Latn"
                     },
                     "finepdfs-slk_Latn": {
@@ -634,6 +690,10 @@
                     "finepdfs-edu-slk_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-slk_Latn"
+                    },
+                    "Helsinki-NLP-nemotron-cc-translated-slk_Latn": {
+                        "proportion": 0.50,
+                        "data": "Helsinki-NLP-nemotron-cc-translated-slk_Latn"
                     }
                 }
             },
@@ -641,7 +701,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-slv_Latn": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-slv_Latn"
                     },
                     "finepdfs-slv_Latn": {
@@ -651,6 +711,10 @@
                     "finepdfs-edu-slv_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-slv_Latn"
+                    },
+                    "Helsinki-NLP-nemotron-cc-translated-slv_Latn": {
+                        "proportion": 0.50,
+                        "data": "Helsinki-NLP-nemotron-cc-translated-slv_Latn"
                     }
                 }
             },
@@ -658,7 +722,7 @@
                 "proportion": 0.02805,
                 "mixture": {
                     "hplt-3.0-sorted-spa_Latn": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-spa_Latn"
                     },
                     "finepdfs-spa_Latn": {
@@ -668,6 +732,10 @@
                     "finepdfs-edu-spa_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-spa_Latn"
+                    },
+                    "MultiSynt-MT-spa_Latn": {
+                        "proportion": 0.50,
+                        "data": "MultiSynt-MT-spa_Latn"
                     }
                 }
             },
@@ -675,7 +743,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-srp_Cyrl": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-srp_Cyrl"
                     },
                     "finepdfs-srp_Cyrl": {
@@ -685,6 +753,10 @@
                     "finepdfs-edu-srp_Cyrl": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-srp_Cyrl"
+                    },
+                    "Helsinki-NLP-nemotron-cc-translated-srp_Cyrl": {
+                        "proportion": 0.50,
+                        "data": "Helsinki-NLP-nemotron-cc-translated-srp_Cyrl"
                     }
                 }
             },
@@ -692,7 +764,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-swe_Latn": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-swe_Latn"
                     },
                     "finepdfs-swe_Latn": {
@@ -702,6 +774,10 @@
                     "finepdfs-edu-swe_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-swe_Latn"
+                    },
+                    "MultiSynt-MT-swe_Latn": {
+                        "proportion": 0.50,
+                        "data": "MultiSynt-MT-swe_Latn"
                     }
                 }
             },
@@ -709,7 +785,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-tur_Latn": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-tur_Latn"
                     },
                     "finepdfs-tur_Latn": {
@@ -719,6 +795,10 @@
                     "finepdfs-edu-tur_Latn": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-tur_Latn"
+                    },
+                    "Helsinki-NLP-nemotron-cc-translated-tur_Latn": {
+                        "proportion": 0.50,
+                        "data": "Helsinki-NLP-nemotron-cc-translated-tur_Latn"
                     }
                 }
             },
@@ -726,7 +806,7 @@
                 "proportion": 0.02777,
                 "mixture": {
                     "hplt-3.0-sorted-ukr_Cyrl": {
-                        "proportion": 0.84,
+                        "proportion": 0.34,
                         "data": "hplt-3.0-sorted-ukr_Cyrl"
                     },
                     "finepdfs-ukr_Cyrl": {
@@ -736,6 +816,10 @@
                     "finepdfs-edu-ukr_Cyrl": {
                         "proportion": 0.01,
                         "data": "finepdfs-edu-ukr_Cyrl"
+                    },
+                    "MultiSynt-MT-ukr_Cyrl": {
+                        "proportion": 0.50,
+                        "data": "MultiSynt-MT-ukr_Cyrl"
                     }
                 }
             }
