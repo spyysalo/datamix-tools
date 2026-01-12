@@ -20,6 +20,7 @@ def parse_args():
     ap = ArgumentParser()
     ap.add_argument('mixture')
     ap.add_argument('paths')
+    ap.add_argument('--output', help='Output filename')
     return ap.parse_args()
 
 
@@ -75,7 +76,7 @@ def validate_mixture(mixture, paths, label=None, names=None, ids=None):
     proportions = []
     for k, v in mixture.items():
         if k in names:
-            raise ValueError(f'duplicate name "{k}"')
+            raise ValueError(f'duplicate name "{k}" in "{v}". names: {names}')
         names.add(k)
     
         if not isinstance(v, dict):
@@ -106,7 +107,8 @@ def validate_mixture(mixture, paths, label=None, names=None, ids=None):
         else:
             raise ValueError(f'neither "{DATA}" not "{MIXTURE}" for "{k}"')
 
-    if sum(proportions) != 1:
+    if round(sum(proportions), 10) != 1: # fixed to avoid floating point issues
+        print(sum(proportions))
         raise ValueError(f'"{PROPORTION}" values do not add to 1 for {label}')
 
 
@@ -127,12 +129,80 @@ def flatten_mixture(mixture, parent_weight=1.0, flattened=None):
 
     return flattened
 
-
 def output_megatron_data_path(mixture, paths):
-    for k, v in flatten_mixture(mixture).items():
-        proportion = v[PROPORTION]
-        path = paths[v[DATA]]
-        print(proportion, path)
+    flattened = flatten_mixture(mixture)
+    items = list(flattened.items())
+    
+    precision = 6
+    multiplier = 10**precision # scale weights to integers based on precision (6 decimal places)
+    
+    
+    scaled_values = []
+    for k, v in items:
+        exact_val = v[PROPORTION] * multiplier
+        floor_val = int(exact_val)
+        remainder = exact_val - floor_val # calculate floor values and keep track of remainders
+        scaled_values.append({
+            'key': k,
+            'path': paths[v[DATA]],
+            'floor': floor_val,
+            'remainder': remainder
+        })
+    
+    # calculate how many 0.000001 are missing to reach 1.0
+    total_floor_sum = sum(x['floor'] for x in scaled_values)
+    diff = multiplier - total_floor_sum  # the number of 1e-6 units to distribute
+    
+    # Sort by remainder descending
+    scaled_values.sort(key=lambda x: x['remainder'], reverse=True)
+    
+    for i in range(int(diff)):
+        scaled_values[i]['floor'] += 1
+        
+    for item in scaled_values:
+        final_proportion = item['floor'] / multiplier
+        print(f"{final_proportion:.{precision}f} {item['path']}")
+
+def save_megatron_data_path(mixture, paths, output_file):
+    flattened = flatten_mixture(mixture)
+    items = list(flattened.items())
+    
+    precision = 6
+    multiplier = 10**precision
+    
+    # scale and calculate floor values
+    processed_items = []
+    for k, v in items:
+        exact_val = v[PROPORTION] * multiplier
+        floor_val = int(exact_val)
+        remainder = exact_val - floor_val
+        processed_items.append({
+            'path': paths[v[DATA]],
+            'floor': floor_val,
+            'remainder': remainder
+        })
+    
+    # fix of rounding errors (Largest Remainder Method)
+    total_floor_sum = sum(x['floor'] for x in processed_items)
+    diff = multiplier - total_floor_sum
+    
+    # sort by remainder descending to give more proportions to those closest to rounding up
+    processed_items.sort(key=lambda x: x['remainder'], reverse=True)
+    for i in range(int(diff)):
+        processed_items[i]['floor'] += 1
+        
+    # all proportion-path pairs are joined by a space
+    output_parts = []
+    for item in processed_items:
+        final_proportion = item['floor'] / multiplier
+        output_parts.append(f"{final_proportion:.{precision}f} {item['path']}")
+    
+    single_line_output = " ".join(output_parts)
+
+    with open(output_file, 'w') as f:
+        f.write(single_line_output)
+    
+    print(f"The datapath: {output_file}")
 
 
 def main():
@@ -164,8 +234,16 @@ def main():
         logging.error(f'error validating {args.mixture}: {e}')
         return 1
 
-    output_megatron_data_path(mixture, paths)
-
+    try:
+        if args.output:
+            # If the user provided --output, save to file
+            save_megatron_data_path(mixture, paths, args.output)
+        else:
+            # If --output is None, print/output to console
+            output_megatron_data_path(mixture, paths)
+    except Exception as e:
+        logging.error(f'error processing output: {e}')
+        return 1
 
 if __name__ == '__main__':
     sys.exit(main())
