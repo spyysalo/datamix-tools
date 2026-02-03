@@ -124,7 +124,7 @@ def parse_args():
     pp = ArgumentParser(add_help=False)    # shared args
     pp.add_argument('--quiet', action='store_true', help='less output')
 
-    sp = ap.add_subparsers()
+    sp = ap.add_subparsers(dest='command', required=True)
 
     ip = sp.add_parser('info', parents=[pp])
     ip.add_argument('bin', help='Megatron .bin file')
@@ -220,6 +220,7 @@ class IndexReader(object):
             for i in tqdm(
                     range(0, self.sequence_count, block_size),
                     total=(self.sequence_count+block_size-1)//block_size,
+                    disable=tqdm.disable,
             ):
                 n = min(block_size, self.sequence_count-i)
 
@@ -257,6 +258,7 @@ class IndexReader(object):
             for i in tqdm(
                     range(0, self.document_count, block_size),
                     total=(self.document_count+block_size-1)//block_size,
+                    disable=tqdm.disable,
             ):
                 n = min(block_size, self.document_count-i)
                 document_indices = np.fromfile(f, np.int64, n)
