@@ -11,8 +11,13 @@ import numpy as np
 
 from copy import deepcopy
 from dataclasses import dataclass
+from functools import cached_property
 from argparse import ArgumentParser
 from tqdm import tqdm
+
+
+# Defaut block/chunk size for streaming reads
+BLOCK_SIZE = 2**20
 
 
 # Megatron-LM indexed dataset `.idx` file header
@@ -77,7 +82,7 @@ def info(args):
     bininfo = get_bin_info(bin_path)
 
     cross_check(idxinfo, bininfo)
-    
+
     data = {
         'idx' : idxinfo.__dict__,
         'bin' : bininfo.__dict__,
@@ -124,17 +129,16 @@ def parse_args():
     ip = sp.add_parser('info', parents=[pp])
     ip.add_argument('bin', help='Megatron .bin file')
     ip.set_defaults(func=info)
-    
+
     vp = sp.add_parser('verify', parents=[pp])
     vp.add_argument('bin', help='Megatron .bin file')
     vp.add_argument('info', help='JSON file with info metadata')
     vp.set_defaults(func=verify)
 
-    
     return ap.parse_args()
 
 
-def md5sum(path, block_size=2**20):
+def md5sum(path, block_size=BLOCK_SIZE):
     """Return hashlib.file_digest(path, "md5").hexdigest(), displaying
     a progress bar while calculating the hash."""
     size = os.path.getsize(path)
@@ -157,7 +161,8 @@ class IndexReader(object):
     information.
 
     Mostly a reduced and simplified version of Megatron _IndexReader
-    (from megatron/core/datasets/indexed_dataset.py).
+    (from megatron/core/datasets/indexed_dataset.py) with some bonus
+    functionality.
 
     Parameters
     ----------
@@ -184,7 +189,10 @@ class IndexReader(object):
             self.seq_len_offset = f.tell()
             seq_len_data_size = self.sequence_count * 4    # int32
             self.seq_ptr_offset = self.seq_len_offset + seq_len_data_size
+            seq_ptr_data_size = self.sequence_count * 8    # int64
+            self.doc_idx_offset = self.seq_ptr_offset + seq_ptr_data_size
 
+    @cached_property
     def total_tokens(self) -> int:
         """Return total number of tokens."""
 
@@ -193,7 +201,7 @@ class IndexReader(object):
             seq_len_size = 4    # int32
             f.seek(self.seq_len_offset + (self.sequence_count-1)*seq_len_size)
             last_seq_len = struct.unpack('<i', f.read(4))[0]
-        
+
             # read last sequence pointer value (where last doc starts)
             seq_ptr_size = 8    # int64
             f.seek(self.seq_ptr_offset + (self.sequence_count-1)*seq_ptr_size)
@@ -201,6 +209,66 @@ class IndexReader(object):
 
             assert last_seq_ptr % self.dtype().itemsize == 0   # sanity
             return last_seq_ptr//self.dtype().itemsize + last_seq_len
+
+    def sanity_check(self, block_size=BLOCK_SIZE):
+        """Check index data integrity, raise exception if there's an issue."""
+        # streaming implementation to support large indices
+        itemsize = self.dtype().itemsize
+        with open(self.path, 'rb') as f:
+            # check sequence_lengths and sequence_pointers
+            current_pointer = 0
+            for i in tqdm(
+                    range(0, self.sequence_count, block_size),
+                    total=(self.sequence_count+block_size-1)//block_size,
+            ):
+                n = min(block_size, self.sequence_count-i)
+
+                # read sequence_lengths[i:i+n]
+                f.seek(self.seq_len_offset + i*4)
+                sequence_lengths = np.fromfile(f, np.int32, n)
+                assert sequence_lengths.size == n, 'unexpected EOF'
+
+                # read sequence_pointers[i:i+n]
+                f.seek(self.seq_ptr_offset + i*8)
+                sequence_pointers = np.fromfile(f, np.int64, n)
+                assert sequence_pointers.size == n, 'unexpected EOF'
+
+                if np.any(sequence_lengths < 0):
+                    raise ValueError("negative value(s) in sequence_lengths")
+                # TODO: consider warning but not failing on zeros
+                if np.any(sequence_lengths == 0):
+                    raise ValueError("zero value(s) in sequence_lengths")
+
+                # sequence_pointers should be the cumulative sum of
+                # sequence_lengths times itemsize (see Megatron
+                # _IndexWriter._sequence_pointers())
+                expected_pointers = current_pointer + np.cumsum(
+                    np.concatenate(([0], sequence_lengths[:-1])),
+                    dtype=np.int64
+                ) * itemsize
+                if not np.array_equal(sequence_pointers, expected_pointers):
+                    raise ValueError('unexpected sequence_pointers value(s)')
+
+                current_pointer += sequence_lengths.sum(dtype=np.int64) * itemsize
+            assert current_pointer/itemsize == self.total_tokens
+
+            # check document_indices
+            f.seek(self.doc_idx_offset)
+            for i in tqdm(
+                    range(0, self.document_count, block_size),
+                    total=(self.document_count+block_size-1)//block_size,
+            ):
+                n = min(block_size, self.document_count-i)
+                document_indices = np.fromfile(f, np.int64, n)
+                assert document_indices.size == n, 'unexpected EOF'
+
+                # single sequence per document, so document indices
+                # should be [0, 1, 2, ... n]
+                expected_indices = np.arange(i, i+n, dtype=np.int32)
+                if not np.array_equal(document_indices, expected_indices):
+                    raise ValueError('unexpected document_indices value(s)')
+
+            assert f.tell() == os.path.getsize(self.path), 'extra data'
 
 
 def get_idx_info(path):
@@ -218,13 +286,16 @@ def get_idx_info(path):
         IdxInfo object with information extracted from `.idx` file.
     """
     logging.info(f'processing {path} ...')
-    
+
     logging.info(f'checking size ...')
     size = os.path.getsize(path)
     assert size > 0, 'zero size .idx'
 
     logging.info(f'reading header ...')
     reader = IndexReader(path)
+
+    logging.info('checking index data ...')
+    reader.sanity_check()
 
     logging.info(f'taking checksum ...')
     checksum = md5sum(path)
@@ -233,7 +304,7 @@ def get_idx_info(path):
         size=size,
         dtype=reader.dtype.__name__,
         sequence_count=reader.sequence_count,
-        total_tokens=reader.total_tokens(),
+        total_tokens=reader.total_tokens,
         md5sum=checksum,
     )
 
@@ -270,10 +341,10 @@ def get_bin_info(path):
 def main():
     args = parse_args()
 
-    loglevel = logging.ERROR if args.quiet else logging.INFO
+    loglevel = logging.WARNING if args.quiet else logging.INFO
     logging.basicConfig(format='%(levelname)s: %(message)s', level=loglevel)
     tqdm.disable = args.quiet    # hacky, sorry
-    
+
     try:
         return args.func(args)
     except Exception as e:
